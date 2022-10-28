@@ -1,9 +1,12 @@
 --- 
-title: "YOUR TITLE HERE"
-author: "YOUR NAME HERE"
+title: "High Performance Computing in R"
+author: "Quirin Stier and Michael C. Thrun"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
+
+knitr::include_graphics("images/Cover.png")
+
 
 # Down the rabbit-hole
 
