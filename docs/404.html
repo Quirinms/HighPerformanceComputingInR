@@ -23,7 +23,7 @@
 <meta name="author" content="Quirin Stier and Michael C. Thrun" />
 
 
-<meta name="date" content="2022-10-28" />
+<meta name="date" content="2022-11-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,6 +52,22 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+\usepackage{booktabs}
+\usepackage{longtable}
+
+\ifxetex
+  \usepackage{letltxmacro}
+  \setlength{\XeTeXLinkMargin}{1pt}
+  \LetLtxMacro\SavedIncludeGraphics\includegraphics
+  \def\includegraphics#1#{% #1 catches optional stuff (star/opt. arg.)
+    \IncludeGraphicsAux{#1}%
+  }%
+  \newcommand*{\IncludeGraphicsAux}[2]{%
+    \XeTeXLinkBox{%
+      \SavedIncludeGraphics#1{#2}%
+    }%
+  }%
+\fi
 
 
 
@@ -69,17 +85,22 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">SHORT TITLE HERE</a></li>
+<li><a href="./">High Performance</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a></li>
-<li class="chapter" data-level="2" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
-<li class="chapter" data-level="3" data-path="r-with-foreign-languages.html"><a href="r-with-foreign-languages.html"><i class="fa fa-check"></i><b>3</b> R with foreign languages</a></li>
-<li class="chapter" data-level="4" data-path="r-with-foreign-languages-1.html"><a href="r-with-foreign-languages-1.html"><i class="fa fa-check"></i><b>4</b> R with foreign languages</a></li>
-<li class="chapter" data-level="5" data-path="r-with-foreign-languages-2.html"><a href="r-with-foreign-languages-2.html"><i class="fa fa-check"></i><b>5</b> R with foreign languages</a></li>
-<li class="chapter" data-level="6" data-path="r-with-foreign-languages-3.html"><a href="r-with-foreign-languages-3.html"><i class="fa fa-check"></i><b>6</b> R with foreign languages</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#about-the-book"><i class="fa fa-check"></i>About the book</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#about-the-authors"><i class="fa fa-check"></i>About the authors</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i>Acknowledgments</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="r-with-foreign-languages.html"><a href="r-with-foreign-languages.html"><i class="fa fa-check"></i><b>2</b> R with foreign languages</a></li>
+<li class="chapter" data-level="3" data-path="r-with-cpp-rcpp.html"><a href="r-with-cpp-rcpp.html"><i class="fa fa-check"></i><b>3</b> R with Cpp (Rcpp)</a></li>
+<li class="chapter" data-level="4" data-path="r-ways-of-parallelization.html"><a href="r-ways-of-parallelization.html"><i class="fa fa-check"></i><b>4</b> R ways of parallelization</a></li>
+<li class="chapter" data-level="5" data-path="r-with-easy-gpu-access.html"><a href="r-with-easy-gpu-access.html"><i class="fa fa-check"></i><b>5</b> R with easy GPU access</a></li>
 <li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+<li><a href="https://mthrun.github.io/index" target="blank">Databionics Team</a></li>
 </ul>
 
       </nav>
@@ -97,6 +118,9 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
+
+%\IncludeGraphicsAux{images/Cover.png}
+\includegraphics[width=0.25cm,height=0.25cm]{images/Cover.png}
 <div id="page-not-found" class="section level1">
 <h1>Page not found</h1>
 <p>The page you requested cannot be found (perhaps it was moved or renamed).</p>

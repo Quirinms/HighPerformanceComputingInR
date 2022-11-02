@@ -8,7 +8,13 @@ site: bookdown::bookdown_site
 
 
 
-# Preface
+# Preface {-}
 knitr::include_graphics("images/Cover.png")
-# About the authors
+
+## About the book {-}
+
+## About the authors {-}
+
+## Acknowledgments {-}
+
 

@@ -1,1 +1,1 @@
-# R with foreign languages
+# R ways of parallelization

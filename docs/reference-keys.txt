@@ -1,6 +1,5 @@
-preface
 introduction
 r-with-foreign-languages
-r-with-foreign-languages-1
-r-with-foreign-languages-2
-r-with-foreign-languages-3
+r-with-cpp-rcpp
+r-ways-of-parallelization
+r-with-easy-gpu-access

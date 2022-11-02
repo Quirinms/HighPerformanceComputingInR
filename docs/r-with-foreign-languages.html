@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 R with foreign languages | High Performance Computing in R</title>
-  <meta name="description" content="Chapter 3 R with foreign languages | High Performance Computing in R" />
+  <title>Chapter 2 R with foreign languages | High Performance Computing in R</title>
+  <meta name="description" content="Chapter 2 R with foreign languages | High Performance Computing in R" />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 R with foreign languages | High Performance Computing in R" />
+  <meta property="og:title" content="Chapter 2 R with foreign languages | High Performance Computing in R" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 R with foreign languages | High Performance Computing in R" />
+  <meta name="twitter:title" content="Chapter 2 R with foreign languages | High Performance Computing in R" />
   
   
   
@@ -23,7 +23,7 @@
 <meta name="author" content="Quirin Stier and Michael C. Thrun" />
 
 
-<meta name="date" content="2022-10-28" />
+<meta name="date" content="2022-11-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="introduction.html"/>
-<link rel="next" href="r-with-foreign-languages-1.html"/>
+<link rel="next" href="r-with-cpp-rcpp.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -52,6 +52,22 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+\usepackage{booktabs}
+\usepackage{longtable}
+
+\ifxetex
+  \usepackage{letltxmacro}
+  \setlength{\XeTeXLinkMargin}{1pt}
+  \LetLtxMacro\SavedIncludeGraphics\includegraphics
+  \def\includegraphics#1#{% #1 catches optional stuff (star/opt. arg.)
+    \IncludeGraphicsAux{#1}%
+  }%
+  \newcommand*{\IncludeGraphicsAux}[2]{%
+    \XeTeXLinkBox{%
+      \SavedIncludeGraphics#1{#2}%
+    }%
+  }%
+\fi
 
 
 
@@ -69,17 +85,22 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">SHORT TITLE HERE</a></li>
+<li><a href="./">High Performance</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a></li>
-<li class="chapter" data-level="2" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
-<li class="chapter" data-level="3" data-path="r-with-foreign-languages.html"><a href="r-with-foreign-languages.html"><i class="fa fa-check"></i><b>3</b> R with foreign languages</a></li>
-<li class="chapter" data-level="4" data-path="r-with-foreign-languages-1.html"><a href="r-with-foreign-languages-1.html"><i class="fa fa-check"></i><b>4</b> R with foreign languages</a></li>
-<li class="chapter" data-level="5" data-path="r-with-foreign-languages-2.html"><a href="r-with-foreign-languages-2.html"><i class="fa fa-check"></i><b>5</b> R with foreign languages</a></li>
-<li class="chapter" data-level="6" data-path="r-with-foreign-languages-3.html"><a href="r-with-foreign-languages-3.html"><i class="fa fa-check"></i><b>6</b> R with foreign languages</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#about-the-book"><i class="fa fa-check"></i>About the book</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#about-the-authors"><i class="fa fa-check"></i>About the authors</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i>Acknowledgments</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="r-with-foreign-languages.html"><a href="r-with-foreign-languages.html"><i class="fa fa-check"></i><b>2</b> R with foreign languages</a></li>
+<li class="chapter" data-level="3" data-path="r-with-cpp-rcpp.html"><a href="r-with-cpp-rcpp.html"><i class="fa fa-check"></i><b>3</b> R with Cpp (Rcpp)</a></li>
+<li class="chapter" data-level="4" data-path="r-ways-of-parallelization.html"><a href="r-ways-of-parallelization.html"><i class="fa fa-check"></i><b>4</b> R ways of parallelization</a></li>
+<li class="chapter" data-level="5" data-path="r-with-easy-gpu-access.html"><a href="r-with-easy-gpu-access.html"><i class="fa fa-check"></i><b>5</b> R with easy GPU access</a></li>
 <li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+<li><a href="https://mthrun.github.io/index" target="blank">Databionics Team</a></li>
 </ul>
 
       </nav>
@@ -97,8 +118,11 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="r-with-foreign-languages" class="section level1 hasAnchor" number="3">
-<h1><span class="header-section-number">Chapter 3</span> R with foreign languages<a href="r-with-foreign-languages.html#r-with-foreign-languages" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+
+%\IncludeGraphicsAux{images/Cover.png}
+\includegraphics[width=0.25cm,height=0.25cm]{images/Cover.png}
+<div id="r-with-foreign-languages" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> R with foreign languages<a href="r-with-foreign-languages.html#r-with-foreign-languages" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 
 </div>
             </section>
@@ -107,7 +131,7 @@
         </div>
       </div>
 <a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="r-with-foreign-languages-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="r-with-cpp-rcpp.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

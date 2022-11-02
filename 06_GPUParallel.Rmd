@@ -1,1 +1,1 @@
-# R with foreign languages
+# R with easy GPU access
