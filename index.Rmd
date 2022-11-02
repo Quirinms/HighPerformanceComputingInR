@@ -5,8 +5,10 @@ date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
 
+
+
+
+# Preface
 knitr::include_graphics("images/Cover.png")
-
-
-# Down the rabbit-hole
+# About the authors
 
